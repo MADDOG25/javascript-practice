@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bucle While Parte 2</title>
+</head>
+<body>
+
+    <script>
+
+        var nombre, edad, poblacion;
+
+        nombre=prompt("Introduce tu nombre por favor:");
+
+            while(!isNaN(nombre)){
+
+                nombre=prompt("Intorduce un nombre valido");
+            }
+
+        edad=prompt("Introduce tu edad por favor:");
+
+            while(edad<=0 || edad>105 || isNaN(edad)){
+                //Mientras la edad sea menor o igual que 0 o mayor que 105 o no es un numero
+
+                edad=prompt("Introduce una edad valida");
+            }
+
+        poblacion=prompt("Introduce tu poblacion por favor:");
+
+            while(!isNaN(poblacion)){
+
+                poblacion=prompt("Intorduce una poblacion correcta");
+            }
+
+    </script>
+    
+</body>
+    <div class="container">
+        <p>Nombre:
+            <script>document.write(nombre);</script>
+        </p>
+        <p>Edad:
+            <script>document.write(edad);</script>
+        </p>
+        <p>Poblacion:
+            <script>document.write(poblacion);</script>
+        </p>
+    </div>
+
+</html>

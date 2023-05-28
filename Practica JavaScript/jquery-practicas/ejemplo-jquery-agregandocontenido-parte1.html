@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregando Contenido Parte 1</title>
+    <style>
+
+        /* .micontenedor{
+            background-color: aqua;
+        } */
+        .container-form{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        form{
+            display: block;
+            margin: 5em;
+        }
+        input{
+            display: flex;
+            justify-content: center;
+            margin: 1em;
+            border: 2px solid black;
+            border-radius: 5px 2px;
+        }
+        #btn{
+            background: purple;
+            color:blanchedalmond;
+            font-size: 16px;
+        }
+
+    </style>
+    <script src="../JQuery/jquery-3.6.3.min.js"></script>
+
+    <script>
+
+        // function validar(){
+
+        //     var n_user=document.getElementById("user").value;
+
+        //     if(n_user==""){
+
+        //         $("#user").after("Rellena este campo, por favor");
+        //     }
+
+        // }
+
+        function validar(){
+
+            var login_user=document.getElementById("user").value;
+
+            if(login_user==""){
+
+                $("#user").after("Campo incorrecto, vuelva a llenarlo");
+            }else{
+
+                $("#user").after("Campo correcto");
+            }
+        }
+
+    </script>
+</head>
+<body>
+
+    <div class="container-form">
+        <form action="" method="get">
+
+            <input type="text" id="user">
+            <input type="text" id="name">
+            <input type="text" id="lastname">
+            <input type="button" value="Send Test" id="btn" onclick="validar()">
+    
+        </form>
+    </div>
+
+    
+    
+    
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eventos</title>
+    <script src="../JQuery/jquery-3.6.3.min.js"></script>
+    <script>
+
+        $(document).ready(function(){
+
+            $('html').dblclick(function(){
+
+                alert('Ayyy');
+            });
+
+            $('a').mouseover(function(){
+
+                var mensaje = '<p> Estas pasando el raton por encima del link </p>';
+
+                $('#principal').append(mensaje);
+            })
+
+            $('#el_boton').click(function(){
+
+                $(this).val('Para de hacer click!');
+            })
+
+            $('#el_campo').focus(function(){
+
+                $(this).val('Ahora vas a escribir aqui');
+            });
+
+        });
+
+    </script>
+  </head>
+  <body>
+    <div id="principal">
+      <h1>Introduccion a eventos</h1>
+
+      <p><a href="#">Un link</a></p>
+
+      <form action="#" method="get">
+        <fieldset>
+          <legend>Formulario</legend>
+          <p>
+            <input
+              type="button"
+              value="Un boton"
+              namne="button"
+              id="el_boton"
+            />
+          </p>
+          <p><input type="text" name="textfield" id="el_campo" /></p>
+        </fieldset>
+      </form>
+    </div>
+  </body>
+</html>

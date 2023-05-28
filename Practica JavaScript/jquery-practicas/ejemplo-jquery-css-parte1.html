@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo Jquery Cambiando atributos Css Parte 1</title>
+    <style>
+        body{
+            margin: 20px;
+        }
+        .container-buttons{
+            display: flex;
+            justify-content: center;
+            margin: 20px;
+        }
+        .container-buttons input{
+            margin: 10px; padding: 8px;
+        }
+        .container-text{
+            display: flex;
+            justify-content: center;
+        }
+        .container-text a{
+            margin: 10px;
+        }
+        .linkdecursos{
+            /*background-color:blueviolet;*/
+            color: #F00;
+            font-weight: bold;
+            margin-left: 25px;
+        }
+        .linkdeinformacion{
+            /*background-color:blueviolet;*/
+            color: #25a315;
+            font-weight: bold;
+            margin-left: 25px;
+        }
+    </style>
+    <script src="../JQuery/jquery-3.6.3.min.js"></script>
+
+    <script>
+
+        $(document).ready(function(){
+
+            //$("a[href^='https://']").addClass("linkdecursos");
+            document.getElementById("cursos").addEventListener("click", resaltacursos, false);
+            document.getElementById("informacion").addEventListener("click", resaltaejemplos, false);
+
+        });
+
+        function resaltacursos(){
+
+            $(".ejemplos").removeClass("linkdeinformacion");
+            $(".cursos").addClass("linkdecursos");
+            /*$(".cursos").toggleClass("linkdecursos");*/
+        }
+
+        function resaltaejemplos(){
+
+            $(".cursos").removeClass("linkdecursos");
+            $(".ejemplos").addClass("linkdeinformacion");
+            /*$(".ejemplos").toggleClass("linkdeinformacion");*/
+        }
+
+    </script>
+</head>
+<body>
+
+    <div class="container-buttons">
+        <input type="radio" name="samebuttons" value="Cursos" id="cursos">
+        <input type="radio" name="samebuttons" value="Informacion" id="informacion">
+    </div>
+
+    <div class="container-text">
+        <a href="https://www.pildorasinformaticas.es" class="cursos">Cursos</a>
+        <a href="ejemplo-declaracion.html" class="ejemplos">Informacion</a>
+        <a href="https://cursa.app/es/" class="cursos">Cursos</a>
+        <a href="ejemplo-calculadora.html" class="ejemplos">Informacion</a>
+        <a href="https://cursa.app/es/" class="cursos">Cursos</a>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eventos Bind</title>
+    <script src="../JQuery/jquery-3.6.3.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        var v_img1 = $("#imagen1").attr("src");
+
+        $("#imagen_grande").hide();
+
+        $('#imagen1').bind('click', v_img1, abreimagen);
+      });
+
+      function abreimagen(e){
+        e.stopPropagation();
+
+        $('#imagen_grande').fadeIn(1000);
+
+        $('#img_sustitucion').replaceWith("<img src='" + e.data + "'width='700' height='450'>");
+      }
+
+      $(document).bind('click keypress', function(){
+        $('#imagen_grande').fadeOut(1000);
+      });
+    </script>
+  </head>
+  <body></body>
+</html>

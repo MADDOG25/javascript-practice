@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leyendo y Cambiando Atributos Css Parte 1</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+
+        div{
+            width: 15%;
+            margin: 0 100px;
+            float: left;
+            border: #F00 solid 2px;
+            padding: 10px;
+        }
+
+        table{
+            width: 100%;
+            margin-top: 10px;
+        }
+    </style>
+
+    <script src="../JQuery/jquery-3.6.3.min.js"></script>
+
+    <script>
+
+        $(document).ready(function(){
+
+            //$("#primer_parrafo").css("background-color","#00F");
+            //Guardamos el valor de esta propiedad css de este elemento
+            //$("p.destacado").css("border","2px dotted blue");
+
+            var botones=document.querySelectorAll("input");
+            //Guardo todos los input en este array
+
+            for(var i=0;botones.length;i++){
+
+                botones[i].addEventListener("click", aumentar, false);
+                botones[i].addEventListener("click", disminuye, false);
+            }
+
+            /*document.getElementById("aumenta1").addEventListener("click", aumentar, false);
+
+            document.getElementById("disminuir1").addEventListener("click", disminuye, false);
+
+            document.getElementById("aumenta2").addEventListener("click", aumentar, false);
+
+            document.getElementById("disminuir2").addEventListener("click", disminuye, false);
+
+            document.getElementById("aumenta3").addEventListener("click", aumentar, false);
+
+            document.getElementById("disminuir3").addEventListener("click", disminuye, false);*/
+
+            function aumentar(e){
+
+                var zonaActuacion;
+
+                if(e.target==aumenta1){
+
+                    zonaActuacion="#noticias1";
+                    //El objeto del evento actuara en noticias1
+                }else if(e.target==aumenta2){
+
+                    zonaActuacion="#noticias2";
+                }else if(e.target==aumenta3){
+
+                    zonaActuacion="#noticias3";
+                }
+
+                var tamDefecto=$(zonaActuacion).css("font-size");
+                //Guardamos el elemento que vamos a utilizar
+
+                tamDefecto=parseInt(tamDefecto);
+                //Cambiamos el tipo de dato a numero
+
+                $(zonaActuacion).css("font-size", tamDefecto*1.5);
+                //Se indica el valor que tomara la propiedad css
+
+            }
+            function disminuye(e){
+
+                if(e.target==disminuir1){
+
+                zonaActuacion="#noticias1";
+                }else if(e.target==disminuir2){
+
+                zonaActuacion="#noticias2";
+                }else if(e.target==disminuir3){
+
+                zonaActuacion="#noticias3";
+                }
+
+                var tamDefecto=$(zonaActuacion).css("font-size");
+
+                tamDefecto=parseInt(tamDefecto);
+                //Cambiamos el tipo de dato a numero
+
+                $(zonaActuacion).css("font-size", tamDefecto*0.95);
+
+            }
+
+        })
+
+    </script>
+
+</head>
+<body>
+
+    <h1>Noticias</h1>
+    <div id="noticias1">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis qui commodi, ducimus mollitia ea facere sunt fuga, ab aspernatur illo ut voluptate, iure quo vitae suscipit doloribus molestiae! Cumque, laboriosam!
+        <table><tr><td style="text-align: left;"><input type="button" value="Aumentar" id="aumenta1"></td>
+        <td style="text-align: right;"><input type="button" value="Disminuir" id="disminuir1"></td></tr></table>
+    </div>
+    <div id="noticias2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis qui commodi, ducimus mollitia ea facere sunt fuga, ab aspernatur illo ut voluptate, iure quo vitae suscipit doloribus molestiae! Cumque, laboriosam!
+        <table><tr><td style="text-align: left;"><input type="button" value="Aumentar" id="aumenta2"></td>
+        <td style="text-align: right;"><input type="button" value="Disminuir" id="disminuir2"></td></tr></table>
+    </div>
+    <div id="noticias3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis qui commodi, ducimus mollitia ea facere sunt fuga, ab aspernatur illo ut voluptate, iure quo vitae suscipit doloribus molestiae! Cumque, laboriosam!
+        <table><tr><td style="text-align: left;"><input type="button" value="Aumentar" id="aumenta3"></td>
+        <td style="text-align: right;"><input type="button" value="Disminuir" id="disminuir3"></td></tr></table>
+    </div>
+    
+</body>
+</html>

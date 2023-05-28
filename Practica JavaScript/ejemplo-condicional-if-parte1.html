@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condicional If</title>
+</head>
+<body>
+
+    <script>
+
+        var precioCoche=60000;
+        var dineroAhorrado=prompt("Introduce cuanto tienes ahorrado");
+        var loteria=prompt("Te a tocado la loteria?");
+
+        if(dineroAhorrado>=precioCoche || loteria=="si"){ 
+        // El operador logico && obligamos que las dos condiciones sean ciertas
+        // El operador logico || obligamos que se cumpla una de las condiciones
+
+            alert("Puedes comprar el coche");
+        }
+        else{
+            alert("No puedes comprar el coche. No tienes suficientes ahorros.");
+        }
+
+        alert("Continuamos con la ejecucion del programa");
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eventos Efectos</title>
+    <style>
+      #login {
+        width: 300px;
+        position: absolute;
+        left: 560px;
+        top: 8px;
+        z-index: 100;
+      }
+      #abierto {
+        cursor: pointer;
+        background: rgb(199, 182, 29) url(../img/icon-plus.png) no-repeat 8px
+          7px;
+        color: rgb(58, 80, 123);
+        padding: 5px 0 20px 30px;
+      }
+      #login .cerrado {
+        background-image: url(../img/icon-minus.png);
+        background: rgb(110, 138, 195);
+      }
+      #abierto:hover {
+        color: rgb(0, 0, 0);
+        background-color: rgb(110, 138, 195);
+      }
+      #login form {
+        padding: 10px 10px 10px 10px;
+        display: none;
+        background-color: rgb(179, 21, 152);
+      }
+      #login label {
+        display: inline-block;
+        width: 100px;
+        text-align: right;
+        margin: 0 15px 0 0;
+        color: rgb(58, 80, 123);
+      }
+      #login input {
+        font-size: 14px;
+      }
+      #login #button {
+        margin-left: 50px;
+      }
+      .cabecera {
+        position: relative;
+        border-top: solid 6px white;
+        padding: 10px 0 10px 0;
+        margin-bottom: 20px;
+      }
+      .login {
+        letter-spacing: -1px;
+        color: rgb(195, 151, 51);
+        text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.25);
+        font: normal 54px Arial, sans-serif;
+      }
+    </style>
+    <script src="../JQuery/jquery-3.6.3.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#abierto").toggle(
+          function () {
+            $("#login form").slideDown(300);
+            $(this).addClass("cerrado");
+          },
+          function () {
+            $('#login form').slideDown(300);
+            $(this).removeClass('cerrado');
+          }
+        );
+      });
+    </script>
+  </head>
+  <body>
+    <div class="cabecera">
+      <p class="logo">Menu de Ejemplo JS</p>
+    </div>
+    <div id="login">
+      <p id="abierto">Login</p>
+      <form>
+        <p>
+          <label for="username">Username:</label>
+          <input type="text" name="username" id="usuario" />
+        </p>
+        <p>
+          <label for="password">Password:</label>
+          <input type="password" name="password" id="contraseña" />
+        </p>
+        <p>
+          <input type="button" name="button" id="boton" value="Enviar" />
+        </p>
+      </form>
+    </div>
+  </body>
+</html>

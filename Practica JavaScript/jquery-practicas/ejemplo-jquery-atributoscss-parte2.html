@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leyendo y Cambiando Atributos Css Parte 2</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+
+        div{
+            width: 15%;
+            margin: 0 100px;
+            float: left;
+            border: #f00 solid 2px;
+            padding: 10px;
+        }
+
+        table{
+            width: 100%;
+            margin-top: 10px;
+        }
+    </style>
+
+    <script src="../JQuery/jquery-3.6.3.min.js"></script>
+
+    <script>
+
+        $(document).ready(function(){
+
+            var botones=document.querySelectorAll("input");
+
+            for(var i=0; i<botones.length;i++){
+
+                botones[i].addEventListener("click", modo_lectura, false);
+
+            }
+
+            function modo_lectura(e){
+
+                var zonaActuacion;
+
+                if(e.target==m_lectura1){
+
+                    zonaActuacion="#noticia1";
+                }else if(e.target==m_lectura2){
+
+                    zonaActuacion="#noticia2";
+                }else if(e.target==m_lectura3){
+
+                    zonaActuacion="#noticia3";
+                }
+
+                $(zonaActuacion).css({"background-color" : "black",
+                                        "font-size" : "18px",
+                                        "color" : "white"});
+            }
+
+        })
+
+    </script>
+</head>
+<body>
+
+    <h1>Noticias</h1>
+
+    <div id="noticia1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, repellat placeat. Rerum voluptates perferendis itaque odit distinctio ut aliquid dolores maiores quas ab accusantium, facere dicta quisquam quis amet laudantium, sit veritatis porro. Voluptate, obcaecati unde totam rerum illum tenetur.
+        <table><tr><td style="text-align: center;"><input type="button" value="Modo Lectura" id="m_lectura1"></td></tr></table>
+    </div>
+    <div id="noticia2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, repellat placeat. Rerum voluptates perferendis itaque odit distinctio ut aliquid dolores maiores quas ab accusantium, facere dicta quisquam quis amet laudantium, sit veritatis porro. Voluptate, obcaecati unde totam rerum illum tenetur.
+        <table><tr><td style="text-align: center;"><input type="button" value="Modo Lectura" id="m_lectura2"></td></tr></table>
+    </div>
+    <div id="noticia3">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, repellat placeat. Rerum voluptates perferendis itaque odit distinctio ut aliquid dolores maiores quas ab accusantium, facere dicta quisquam quis amet laudantium, sit veritatis porro. Voluptate, obcaecati unde totam rerum illum tenetur.
+        <table><tr><td style="text-align: center;"><input type="button" value="Modo Lectura" id="m_lectura3"></td></tr></table>
+    </div>
+    
+</body>
+</html>

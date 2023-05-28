@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo JQuery Parte 2</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+    <script>
+
+        $(document).ready(function(){
+
+            $("#carrete img").hide();
+        });
+        //A esto se le llama loop automatico
+
+    </script>
+
+    <script>
+
+        $(document).ready(function(){
+
+            $("#anuncio").width(500)
+            .height(500)
+            .text("¡Vende!")
+            .hide()
+            .fadeIn(10000);
+            //A esto se le llama funciones encadenadas o chained functions
+
+        })
+
+    </script>
+
+    <!-- <script>
+
+        var anuncio=document.getElementById("anuncio");
+
+        anuncio.style.width="500px";
+        anuncio.style.height="500px";
+        anuncio.innerHTML="¡Vende!";
+        /Esta linea sustituye el texto
+
+    </script> -->
+    
+</head>
+<body>
+
+    <div id="carrete">
+        <img src="https://placeimg.com/640/480/any" alt="">
+        <img src="https://placeimg.com/640/480/any" alt="">
+        <img src="https://placeimg.com/640/480/any" alt="">
+        <img src="https://placeimg.com/640/480/any" alt="">
+
+    </div>
+    
+</body>
+<!-- <script>
+    /Esto es codigo de JavaScript Tradicional
+
+    var imagenes=document.querySelectorAll("#carrete img");
+    /Aqui se selecionan todas las etiquetas dentro del parentesis
+
+    for(var i=0;i<imagenes.lenght;i++){
+
+        imagenes[i].style.visibility="hidden";
+    }
+
+</script> -->
+</html>

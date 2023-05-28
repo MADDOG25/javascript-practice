@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condicional If #2</title>
+</head>
+<body>
+
+    <input type="text" id="colorfondo">
+
+    <script>
+
+        var body=document.getElementById("colorfondo");
+        var colorBody=prompt("Cual color deseas de fondo: Azul/Rojo/Verde").toLowerCase();
+        // toLowerCase hace que las palabras ingresadas sean todas en minusculas
+        // toUpperCase hace que las palabras ingresadas sean toas en mayusculas
+
+        // if(colorBody=="azul"){
+
+        //     body.style.backgroundColor="blue";
+        
+        // }else if(colorBody=="rojo"){
+
+        //     body.style.backgroundColor="red";
+        
+        // }else if(colorBody=="verde"){
+
+        //     body.style.backgroundColor="green";
+        // } 
+
+        if(colorBody!="azul" && colorBody!="rojo" && colorBody!="verde"){
+            // El operador != es de diferente que...
+            // Con el operador logico && hacemos que las condiciones se cumplan
+
+            alert("Ese color no esta comtemplado");
+        }
+        else if(colorBody=="azul"){
+
+            body.style.backgroundColor="blue";
+        }
+        else if(colorBody=="rojo"){
+
+            body.style.backgroundColor="red";
+        }
+        else{
+
+            body.style.backgroundColor="green";
+
+        }
+
+    </script>
+    
+</body>
+</html>

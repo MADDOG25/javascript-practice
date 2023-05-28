@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones Calculadora Arcaica Parte 3</title>
+    <script>
+
+        var repetir="si";
+
+        function suma (num1,num2){
+            //Se añade una funcion con parametros de numeros
+
+            alert("La suma es: " + (num1+num2));
+        }
+
+        function resta (num1,num2){
+
+            alert("La resta es: " + (num1-num2))
+        }
+        function multiplicar (num1,num2){
+
+            alert("La multiplicación es: " + (num1*num2))
+        }
+        function dividir (num1,num2){
+
+            alert("La división es: " + (num1/num2))
+        }
+        
+    do{
+        var operacion=prompt("Qué operación desea realizar");
+        var operador1=parseInt(prompt("Introduce el primer n°"));
+        //Se usa el parseInt para que el dato ingresado sea solo numero
+        var operador2=parseInt(prompt("Introduce el segundo n°"));
+
+        if(operacion=="suma"){
+
+            suma(operador1,operador2);
+            //Se llama a la funcion con los dos parametros que se piden en el prompt
+            //Y se anidadn elseif para las otras llamadas de funciones
+        }
+        else if(operacion=="resta"){
+
+            resta(operador1,operador2);
+        }
+        else if(operacion=="multiplicacion"){
+
+            multiplicar(operador1,operador2);
+        }
+        else if(operacion=="division"){
+
+            dividir(operador1,operador2);
+        }
+        else{
+            alert("Lo siento. operación Invalida");
+            //Posibilidad de que no ingrese el dato correcto
+        }
+
+        repetir=prompt("Desea realizar otras operaciones:");
+
+    }while(repetir=="si");
+    //Siempre y cuando repetir sea igual a si se repetira
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
