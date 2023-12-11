@@ -1,0 +1,132 @@
+*{
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* overflow-y: hidden; */
+    background-color: antiquewhite;
+}
+
+/* ETIQUETA PRODUCTO */
+.tag{
+    width: 4rem;
+    display: flex;
+    justify-content: center;
+    font-size: 0.9rem;
+    background-color: black;
+    color: #fff;
+    border-radius: 5px;
+}
+
+/* PRODUCTO */
+.product-title{
+    font-size: 2rem;
+    font-weight: 700;
+}
+.product-card{
+    width: 30%;
+    height: 100%;
+    display: grid;
+    /* align-items: center; */
+    grid-template-rows: 55% 45%;
+    background: #fff;
+    box-shadow: 10px 10px 25px 0px #3c3c3c;
+}
+.product-image{
+    width: 28rem;
+    height: 66%;
+    padding: 40px 10px;
+    background-image: url("https://i.postimg.cc/NGRJX8hr/black-benz.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* border: 2px solid black; */
+}
+.product-description{
+    margin-top: -100px;
+    padding-left: 20px;
+    background-color: #62c256;
+    color: #fff;
+}
+.product-details{
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: -10px;
+}
+.product-image img{
+    width: 28rem;
+}
+.stars{
+    color: yellow;
+    font-size: 1em;
+}
+
+/* COLORES */
+.color-price{
+    width: 70%;
+    margin-top: -15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.colors{
+    width: 6rem;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.red{
+    width: 25px;
+    height: 25px;
+    background: red;
+    border-radius: 50%;
+}
+.gray{
+    width: 25px;
+    height: 25px;
+    background: gray;
+    border-radius: 50%;
+}
+.black{
+    width: 25px;
+    height: 25px;
+    background: black;
+    border-radius: 50%;
+}
+.pricing{
+    display: flex;
+    width: 12rem;
+    justify-content: space-between;
+    align-items: center;
+}
+.old-price{
+    font-weight: 100;
+}
+
+/* BOTONES */
+button{
+    cursor: pointer;
+}
+#button{
+    padding: 10px 25px;
+    background-color: #000;
+    border: none;
+    border-radius: 5px;
+}
+button white-button{
+    background-color: #fff;
+}
+.button-text{
+    margin-left: 5px;
+    color: #fff;
+}
+.feedback{
+    display: none;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 5px;
+}
